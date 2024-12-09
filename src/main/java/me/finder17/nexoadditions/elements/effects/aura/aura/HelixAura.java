@@ -1,8 +1,8 @@
 package me.finder17.nexoadditions.elements.effects.aura.aura;
 
-import me.finder17.nexoadditions.elements.effects.aura.AuraMechanic;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
+import me.finder17.nexoadditions.elements.effects.aura.AuraMechanic;
 
 public class HelixAura extends Aura {
 
