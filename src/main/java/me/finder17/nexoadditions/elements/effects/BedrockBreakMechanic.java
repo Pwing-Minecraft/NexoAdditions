@@ -1,4 +1,4 @@
-package cme.finder17.nexoadditions.elements.effects.bedrockbreak;
+package me.finder17.nexoadditions.elements.effects.bedrockbreak;
 
 import com.nexomc.nexo.mechanics.Mechanic;
 import com.nexomc.nexo.mechanics.MechanicFactory;
