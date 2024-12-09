@@ -1,7 +1,7 @@
 package cme.finder17.nexoadditions.elements.effects.bedrockbreak;
 
-import com.nexomc.nexo.mechanics.Mechanic
-import com.nexomc.nexo.mechanics.MechanicFactory
+import com.nexomc.nexo.mechanics.Mechanic;
+import com.nexomc.nexo.mechanics.MechanicFactory;
 import org.bukkit.configuration.ConfigurationSection;
 
 import java.util.concurrent.ThreadLocalRandom;

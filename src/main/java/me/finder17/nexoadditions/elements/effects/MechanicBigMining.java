@@ -1,7 +1,7 @@
 package me.finder17.nexoadditions.elements.effects.bigmining;
 
-import com.nexomc.nexo.mechanics.Mechanic
-import com.nexomc.nexo.mechanics.MechanicFactory
+import com.nexomc.nexo.mechanics.Mechanic;
+import com.nexomc.nexo.mechanics.MechanicFactory;
 import org.bukkit.configuration.ConfigurationSection;
 
 public class BigMiningMechanic extends Mechanic {
