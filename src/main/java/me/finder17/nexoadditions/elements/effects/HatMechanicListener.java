@@ -40,13 +40,13 @@ public class HatMechanicListener implements Listener {
         if (item.getType() == Material.AIR) {
             if (event.getClickedPosition().getY() < 1.55) return; // Did not click head
             if (!NexoItems.exists(equipment.getHelmet())) return;
-            if (!NexoItems.hasMechanic(NexoItems.getIdByItem(equipment.getHelmet()), "hat")) return;
+            if (!NexoItems.hasMechanic(NexoItems.idFromItem(equipment.getHelmet()), "hat")) return;
             if (player.getInventory().firstEmpty() == -1) return;
 
             player.getInventory().addItem(equipment.getHelmet());
             equipment.setHelmet(null);
         } else {
-            String itemID = NexoItems.getIdByItem(item);
+            String itemID = NexoItems.idFromItem(item);
             if (equipment.getHelmet().getType() != Material.AIR) return;
             if (!NexoItems.hasMechanic(itemID, "hat")) return;
 
@@ -63,7 +63,7 @@ public class HatMechanicListener implements Listener {
         if (event.getAction() != Action.RIGHT_CLICK_AIR && event.getAction() != Action.RIGHT_CLICK_BLOCK) return;
 
         final ItemStack item = event.getItem();
-        final String itemID = NexoItems.getIdByItem(item);
+        final String itemID = NexoItems.idFromItem(item);
         final Player player = event.getPlayer();
         final PlayerInventory inventory = player.getInventory();
 
@@ -84,7 +84,7 @@ public class HatMechanicListener implements Listener {
     public void onPlaceHatNotOnHelmetSlot(final ArmorEquipEvent event) {
         final ItemStack newArmorPiece = event.getNewArmorPiece();
         if (newArmorPiece == null) return;
-        final String itemID = NexoItems.getIdByItem(newArmorPiece);
+        final String itemID = NexoItems.idFromItem(newArmorPiece);
         if (factory.isNotImplementedIn(itemID) || event.getMethod() != ArmorEquipEvent.EquipMethod.SHIFT_CLICK) return;
         event.setCancelled(true);
     }
@@ -99,12 +99,12 @@ public class HatMechanicListener implements Listener {
         if (e.getSlotType() != InventoryType.SlotType.ARMOR || cursor == null) return;
 
         final ItemStack clone = cursor.clone();
-        String itemID = NexoItems.getIdByItem(clone);
+        String itemID = NexoItems.idFromItem(clone);
         final ItemStack currentItem = e.getCurrentItem();
 
         if (factory.isNotImplementedIn(itemID)) {
             if (cursor.getType() == Material.AIR) {
-                itemID = NexoItems.getIdByItem(currentItem);
+                itemID = NexoItems.idFromItem(currentItem);
                 if (factory.isNotImplementedIn(itemID)) return;
 
                 if (!EventUtils.callEvent(ArmorEquipEvent.NexoHatEquipEvent(player, currentItem, cursor)))
