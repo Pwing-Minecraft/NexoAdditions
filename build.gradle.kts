@@ -11,7 +11,6 @@ repositories {
     mavenLocal()
     mavenCentral()
     maven("https://repo.papermc.io/repository/maven-public/")
-    maven("https://repo.skriptlang.org/releases")
     maven("https://repo.nexomc.com/snapshots/")
 }
 
@@ -20,15 +19,14 @@ java {
     toolchain.languageVersion = JavaLanguageVersion.of(21)
 }
 
-description = "A skript addon that aims to link Nexo and Skript"
-group = "me.asleepp"
-version = "1.0.3"
+description = "Mechanics some ppl miss"
+group = "me.finder17"
+version = "1.0"
 
 dependencies {
     compileOnly(libs.paper.api)
     compileOnly(libs.lombok)
     compileOnly(libs.nexo)
-    compileOnly(libs.skript)
     annotationProcessor(libs.lombok)
 }
 
@@ -95,10 +93,6 @@ tasks {
             languageVersion = javaVersion
         }
 
-        downloadPlugins {
-            url("https://github.com/SkriptLang/Skript/releases/download/2.9.4/Skript-2.9.4.jar")
-            // Add your own plugins to download here, stick any that you cant download into the run folder this generates.
-        }
 
         jvmArgs = jvmArgsExternal
     }
