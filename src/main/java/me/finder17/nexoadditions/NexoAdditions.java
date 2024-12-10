@@ -1,7 +1,7 @@
 package me.finder17.nexoadditions;
 
 import java.io.IOException;
-import com.nexomc.nexo.config.*;
+import com.nexomc.nexo.configs.*;
 
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginManager;
