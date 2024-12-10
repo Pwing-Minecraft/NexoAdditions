@@ -1,7 +1,7 @@
 name: nexoadditions
 authors: [finder1793]
-description: A Skript Addon that adds useful syntax to be used in conjunction with Oraxen
+description: blep
 api-version: 1.13
 version: 1.0
-main: me.finder17.nexoadditons.NexoAdditions
-depend: [Skript, Nexo]
+main: me.finder17.nexoadditions.NexoAdditions
+depend: [ Nexo]
