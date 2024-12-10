@@ -1,7 +1,7 @@
 package me.finder17.nexoadditions;
 
 import java.io.IOException;
-
+import com.nexomc.nexo.config.*
 
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginManager;
@@ -31,20 +31,6 @@ public class NexoAdditions extends JavaPlugin {
             manager.disablePlugin(this);
             return;
         }
-        int pluginId = 21274; // todo replace this with new bstats id
-        Metrics metrics = new Metrics(this, pluginId);
-        instance = this;
-        addon = Skript.registerAddon(this);
-        addon.setLanguageFileDirectory("lang");
-        try {
-            addon.loadClasses("me.finder17.skriptnexo", "elements");
-        } catch (IOException error) {
-            error.printStackTrace();
-            manager.disablePlugin(this);
-            return;
-        }
-        long finish = System.currentTimeMillis() - start;
-        getLogger().info("Succesfully loaded nexoadditons in " + finish + "ms!");
 
     }
 
